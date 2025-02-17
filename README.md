@@ -315,6 +315,10 @@ python3 setup_nba_data_lake.py
 
 ![json](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/json%20file.png)
 
+![json](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/json%20cont.png)
+
+![json](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/json%20cont%203.png)
+
 
 To delete the resources, run:
 
