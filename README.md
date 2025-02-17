@@ -11,6 +11,19 @@ This project sets up a data lake to store and process NBA sports data using AWS 
 - **AWS Glue**: A serverless integration service to catalog the data stored in S3 and load it into Athena.
 - **Amazon Athena**: Allows querying of the data stored in S3 using SQL queries.
 
+## Interpretation of the Project
+
+This project is designed to automate the setup of a sports analytics data lake for NBA data. By using AWS services, it allows users to:
+
+- Collect NBA player data from the SportsData.io API.
+- Store the data in an S3 bucket.
+- Catalog and structure the data using AWS Glue.
+- Set up Athena to allow querying of the data stored in S3.
+
+This approach provides a scalable, cost-efficient solution for analyzing large amounts of sports data and performing advanced analytics using SQL-based queries.
+
+---
+
 ## Steps to Set Up
 
 ### Prerequisites
@@ -38,6 +51,9 @@ Ensure the user or role running the script has the following permissions:
 
 1. Go to [aws.amazon.com](https://aws.amazon.com) and sign into your account.
 2. In the top right, next to the search bar, click the square with a `>_` inside to open the CloudShell.
+
+![cloud shell](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/log%20in.png)
+
 
 ### Step 2: Create the `setup_nba_data_lake.py` File
 
@@ -270,6 +286,9 @@ if __name__ == "__main__":
     main()
 ```
 
+![python script](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/py-script.png)
+
+
 ### Step 3: Create the delete.py Script
 
 ```
@@ -293,12 +312,31 @@ def delete_athena_query_results(bucket_name):
     except ClientError as e:
         print(f"Error deleting Athena query results: {e}")
 ```
+![delete script](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/delete_py.png)
+
+
+**ls to see see the files and directories that are present in the current directory or the directory**
+
+![delete script](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/ls.png)
 
 # Running the Scripts 
 
 ```
 python3 setup_nba_data_lake.py
 ```
+
+![run s](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/ran%20setup%20script.png)
+
+*N.b ignore the errors, it was because I ran the script twice*
+ 
+
+# Go to s3 bucket and open the Json file to get the data #
+
+![s3](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/resources%20created.png)
+
+
+![json](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/json%20file.png)
+
 
 To delete the resources, run:
 
