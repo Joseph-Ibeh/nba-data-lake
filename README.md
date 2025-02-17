@@ -1,3 +1,5 @@
+![arc diagram](https://github.com/Joseph-Ibeh/nba-data-lake/blob/main/Assets/arch%20diag%20main.png)
+
 # Sports Analytics Data Lake
 
 This project sets up a data lake to store and process NBA sports data using AWS services such as S3, AWS Glue, and Athena. It uses the SportsData.io API to fetch NBA player data and process it for analytics purposes. There are two main scripts in the project:
