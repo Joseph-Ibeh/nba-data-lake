@@ -49,6 +49,7 @@ nano setup_nba_data_lake.py
 
 2. Paste the following script into the file:
 
+```
 import boto3
 import json
 import time
@@ -267,10 +268,11 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 
 ### Step 3: Create the delete.py Script
 
+```
 import boto3
 from botocore.exceptions import ClientError
 
@@ -290,13 +292,13 @@ def delete_athena_query_results(bucket_name):
                 print(f"Deleted Athena query result: {obj['Key']}")
     except ClientError as e:
         print(f"Error deleting Athena query results: {e}")
-
+```
 
 # Running the Scripts 
 
 ```
 python3 setup_nba_data_lake.py
-
+```
 
 To delete the resources, run:
 
@@ -313,5 +315,5 @@ Issue: Initially, I faced challenges with loading the API key and endpoint prope
 
 Takeaway: It's important to test environment variable loading and configurations before running the script.
 
-Conclusion
+**Conclusion**
 This project demonstrates how to set up a data lake using AWS services and integrate data from an external API for sports analytics.
