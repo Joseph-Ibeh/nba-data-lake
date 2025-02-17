@@ -2,7 +2,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 # Define the names of resources to delete
-BUCKET_NAME = "sports-analytics-data-lake"
+BUCKET_NAME = "Jose-sports-analytics-data-lake"
 GLUE_DATABASE_NAME = "glue_nba_data_lake"
 
 def delete_athena_query_results(bucket_name):
